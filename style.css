@@ -1,0 +1,104 @@
+:root {
+    --coffee-dark:#3E2723;
+    --coffee-medium:#6F4E37;
+    --coffee-light:#C4A484;
+    --coffee-acent:#D2B48C;
+    --coffee-cream:#F5F5DC;
+    --coffee-gold:#D4AF37;
+    --text-darkl:#2C2416;
+    --text_light:#f3f3f3;
+    
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: var(--coffee-cream);
+            color: var(--text-dark);
+            line-height: 1,7;
+            overflow-x: hiden;
+        }
+
+        .container {
+            width : 90%;
+            max-width: 1200px;
+            margin: 0 auto;        
+        }
+
+        
+        header {
+            background: #161515;
+             position: fixed;
+             width:100%;       
+             top: 0;
+             z-index: 1000;
+             padding: 10px 0;
+             transition: all 0.4s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;   
+        }
+
+        .logo-icon {
+         color:var(--coffee-gold);
+         font-size: 28px;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--coffee-medium);
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: var(--coffee-gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--coffee-medium);
+            font-weight: 600;
+            font-size: 16px;
+            position: relative;
+            padding:5px 0;
+            transition: color 0.3s ease;
+
+        }
+    
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--coffee-gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover:after {
+            width: 100%;
+        }
