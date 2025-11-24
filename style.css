@@ -33,30 +33,33 @@
         
         header {
             background: #161515;
-             position: fixed;
-             width:100%;       
-             top: 0;
-             z-index: 1000;
-             padding: 10px 0;
-             transition: all 0.4s ease;
+            padding: 0;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
         }
 
-        .header-container {
+        .header.container {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 2rem;
+            gap: 2rem;
+        
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-            text-decoration: none;   
+            gap: 0.5rem;
+            text-decoration: none; 
+            white-space: nowrap;  
         }
 
         .logo-icon {
-         color:var(--coffee-gold);
-         font-size: 28px;
+         font-size: 2rem;
+         color: #d4af37
         }
 
         .logo-text {
@@ -102,3 +105,43 @@
         nav a:hover:after {
             width: 100%;
         }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+
+        }
+
+        .btn {
+        display: inline-block;
+        padding : 8px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        font-size: 16px;
+        }   
+
+        .btn-primary {
+            background: var(--coffee-medium);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--coffee-dark);
+            transform: translateY(-3px);
+        }
+
+      .btn-secuydary {
+        background: transparent;
+        color: var(--coffee-medium);
+        border: 2px solid var(--coffee-medium);
+      }
+
+      .btn-secundary: hover {
+        background: rgba(111, 787, 55, 0.05);
+        transform: translateYU(-3px);
+      }
+       
