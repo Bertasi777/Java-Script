@@ -140,8 +140,34 @@
         border: 2px solid var(--coffee-medium);
       }
 
-      .btn-secundary: hover {
+      .btn-secundary:hover {
         background: rgba(111, 787, 55, 0.05);
         transform: translateYU(-3px);
       }
        
+      .hero{
+         height: 100vh;
+         display: flex;
+         align-items: center;
+         position: relative;
+         overflow: hiden;
+        padding-top: 80px;         
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0B0705 0%, #010000 50%);
+        z-index: -1
+      }
+
+    .hero-content {
+        width: 750px;
+        color: var(--text-light);
+        animation: fadeInup 1s ease-out;
+        
+    }
