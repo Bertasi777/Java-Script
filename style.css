@@ -27,7 +27,7 @@ body {
 .container {
     width : 90%;
     max-width: 1200px;
-    margin: 0 auto;        
+    margin: 0 auto;  
 }
 
 
@@ -146,7 +146,7 @@ nav a:hover:after {
     transform: translateY(-3px);
 }
 
-.hero{
+.firstSection{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -155,7 +155,7 @@ nav a:hover:after {
 padding-top: 80px;         
 }
 
-.hero::before {
+.firstSection::before {
     content: '';
     position: absolute;
     top: 0;
@@ -176,11 +176,11 @@ padding-top: 80px;
 
 }
 
-.hero .container {
+.firstSection .container {
     display: flex;
 }
 
-.hero-subtitle {
+.firstSection-subtitle {
     font-size: 20px;
     color:var(coffee-acent);
     margin-top: 20px;
@@ -190,13 +190,13 @@ padding-top: 80px;
     gap: 10px;
 }
 
-.hero-subtitle::before {
+.firstSection-subtitle::before {
     content: '';
     width: 50px;
     height: 2px;
     background: var(--coffee-gold)    
 }
-.hero-title {
+.firstSection-title {
     font-size: 58px;
     line-height: 1.1;
     margin-bottom: 25px;
@@ -204,18 +204,18 @@ padding-top: 80px;
     color: var(--text-light);
 }
 
-.hero-title span{
+.firstSection-title span{
     color: var(--coffee-gold);
     position: relative;
 }
 
-.hero-text {
+.firstSection-text {
     font-size: 18px;
     margin-bottom: 120px;
 
 }
 
-.hero-buttoms {
+.firstSection-buttoms {
     display: flex;
     gap: 20px;
     margin-top: 30px;
@@ -224,14 +224,16 @@ padding-top: 80px;
 .products {
     padding: 120px 0;
     position: relative;
-    background-color: #161515;
+    background-color:#F5F5DC;
     border-top: 4px solid var(--coffee-gold);
 }
 
-.section header {
+.section-header {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 70px;
+    flex-direction: row;
+
 }
 
 .section-subtitle {
@@ -251,21 +253,15 @@ padding-top: 80px;
     
 }
 
-.product-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-}
 
 .product-card {
   width: 100%;
   max-width: 360px;
-  background: white;
+  background:var(--coffee-dark);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
+  display: fixed;
   flex-direction: column;
 }
 
@@ -323,14 +319,14 @@ padding-top: 80px;
 }
 
 .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50px;
-        transform: translateX(-50px);
-        width: 80px;
-        height: 3px;
-        background: var(--coffee-gold);
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50px;
+    transform: translateX(-50px);
+    width: 80px;
+    height: 3px;
+    background: var(--coffee-gold);
 }
 .section-desc {
     font-size: 18px;
@@ -338,6 +334,73 @@ padding-top: 80px;
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px; 
+}
+
+
+.product-card:hover {
+    transform: translateY(-15px);
+    border: 2px rolid var(--coffee-gold);
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.product-info {
+    padding: 25px;
+    position: relative;
+}
+.product-tag {
+    position: absolute;
+    top: -20px;
+    right: 25px;
+    background: ar(--coffee-gold);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.product-title {
+    font-size: 24px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    color: var(---text-light);
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--coffeee-gold);
+}
+
+.ratting {
+    color: var(--coffee-gold);
+    font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
